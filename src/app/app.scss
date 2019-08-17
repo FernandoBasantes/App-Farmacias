@@ -1,0 +1,177 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// http://ionicframework.com/docs/v2/theming/
+.pageBackground {
+    background: url("../assets/img/pageBackground.png") no-repeat;
+    background-size: cover;
+}
+
+.canasGordas {
+    background: url("../assets/img/cañas_gordas.jpg") no-repeat;
+}
+
+.ppalBackground {
+    background: url("../assets/img/ppalBanner.png") no-repeat;
+}
+
+.pageTitle {
+    background: color($colors, antSiemb_primary1);
+    height: 50px;
+    text-align: center;
+    top: -2px;
+    h2 {
+        color: white !important;
+        margin: 0;
+        transform: translateY(30%);
+        vertical-align: middle;
+    }
+}
+
+.map {
+    position: relative;
+    top: 0px;
+}
+
+.titulo {
+    position: relative;
+    top: -2px;
+}
+
+.TituloPerfil {
+    font-family: Roboto;
+    color: color($colors, antSiemb_primary1);
+    font-style: bold;
+}
+
+.TituloMun {
+    font-family: Roboto;
+    color: black;
+    font-size: 12px;
+}
+
+.Subtitulo {
+    font-size: 10px;
+    color: black;
+    font-style: italic;
+}
+
+.Texto {
+    font-family: Roboto;
+    color: black;
+    font-size: 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: color($colors, antSiemb_primary1) !important;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    // border-bottom: 1px dotted #A2D734;
+    color: color($colors, antSiemb_primary2);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+tr {
+    cursor: pointer;
+}
+
+tr:hover {
+    background: color($colors, antSiemb_primary3) !important;
+}
+
+.checkbox-icon {
+    border-radius: 50% !important;
+}
+
+.searchbar-md {
+    width: 40% !important;
+}
+
+.avatarContent {
+    border: 7px solid color($colors, antSiemb_primary1);
+    height: 100% !important;
+    width: 60%;
+    margin: 10px auto;
+    width: 80% !important;
+}
+
+.avatarName {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.avatarPosition {
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.menu {
+    border-top: 1px solid;
+    margin: 15px;
+}
+
+.iconMenu {
+    bottom: 10px;
+    left: 40%;
+    position: fixed;
+    width: 15%;
+}
+
+.searchFilter {
+    width: 100% !important;
+    & .searchbar-input {
+        width: 100% !important;
+    }
+}
+
+#notification-button {
+    position: relative;
+    width: 42px;
+    top: 1px;
+    right: 1px;
+    overflow: visible!important;
+}
+
+#notifications-badge {
+    background-color: red;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    padding: 3px 3px;
+}

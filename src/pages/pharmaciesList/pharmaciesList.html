@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="antSiemb_primary1">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Farmacias {{(State == "Opened")?" Abiertas": (State == "Turn")? "De Turno": ""}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <h2>Farmacias cercanas</h2>
+        <ion-list>
+            <ion-item *ngFor="let pharmacy of pharmacies">
+                <ion-card>
+                    <ion-row>
+                        <ion-col class="texto">
+                            <h2>{{pharmacy.nombre}}</h2>
+                            <br><strong>Dir: </strong>{{pharmacy.direccion}}
+                            <br><strong>Teléfono: </strong>{{pharmacy.telefono}}
+                            <br><strong>Hora Inicio: </strong>{{pharmacy.horaInicioHorario}}
+                            <br><strong>Hora Fin: </strong>{{pharmacy.horaFinHorario}}
+                            <br><strong>Distancia: </strong>{{pharmacy.distancia}} Km
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col offset-10 col-2>
+                            <div class="buttonLocate" (click)="goNavigator(pharmacy.latitud, pharmacy.longitud)">
+                                <img src="assets/img/navigator.png" alt="">
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

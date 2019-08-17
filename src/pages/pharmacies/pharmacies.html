@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="antSiemb_primary1">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Farmacias {{(State == "Opened")?" Abiertas": (State == "Turn")? "de Turno": ""}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div id="map_canvas" style="height: 78%;">
+        <div class="buttonLocate" (click)="centerLocation()">
+            <img src="assets/img/location.png" alt="">
+        </div>
+    </div>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-range min="1" max="10" pin="true" [(ngModel)]="zoom" (ionChange)="zoomChange()">
+                        <ion-label range-left>1 Km</ion-label>
+                        <ion-label range-right>10 km</ion-label>
+                    </ion-range>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+                <button ion-button color="antSiemb_primary1" (click)="morePharmacies()"> <ion-icon name="md-list"></ion-icon>
+                    &nbsp;Ver Lista</button>
+            </ion-col>
+            <ion-col></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

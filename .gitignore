@@ -1,0 +1,11 @@
+build/
+node_modules/
+www/
+platforms/
+temp/
+plugins/
+
+.tmp
+.sass-cache
+
+package-lock.json
